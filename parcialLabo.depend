@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1666192133 source:c:\users\franco\documents\parciallabo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+
+1666189761 source:c:\users\franco\documents\parciallabo\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+
+1666191075 c:\users\franco\documents\parciallabo\auto.h
+
