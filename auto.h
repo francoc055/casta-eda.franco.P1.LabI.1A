@@ -13,16 +13,23 @@ char NombreColor[20];
 
 typedef struct{
 int id;
+char nombre[20];
+char sexo;
+}eCliente;
+
+typedef struct{
+int id;
 int idMarca;
 int IdColor;
 char caja;
+int idCliente;
 int isEmpty;
 }eAuto;
 
 
 #endif // AUTO_H_INCLUDED
 
-
+int hardcodearAutos(int* pId, eAuto vec[], int tam, int cant);
 /** \brief hace un printf de un indice de la estructura eMarca
  *
  * \param marca eMarca recibe por parametro la estructura eMarca
@@ -83,7 +90,7 @@ int buscarLibre(int* pId, eAuto aauto[], int tamA);
  *
  *
  */
-int cargaraAuto(eAuto* pAuto, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int cargaraAuto(eAuto* pAuto, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief comparo la PK con FK y cargo la descripcion con un string
  *
  * \param id int paso id por parametro
@@ -114,7 +121,7 @@ int cargarDescripcionColor(int id, char nombreColor[], eColor colores[], int tam
  * \return int devuelve 1 si salio todo bien de lo contrario 0
  *
  */
-int mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief muestro los autos del array autos
  *
  * \param autos[] eAuto  paso por param autos para recorrerlo
@@ -126,7 +133,7 @@ int mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
  * \return int devuelve 1 si salio todo bien de lo contrario 0
  *
  */
-int mostrarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int mostrarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief doy de alta el auto
  *
  * \param pId int* paso por referencia pId
@@ -139,7 +146,7 @@ int mostrarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colo
  * \return int devuelve 1 si salio todo bien de lo contrario 0
  *
  */
-int altaAuto(int* pId, eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int altaAuto(int* pId, eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief busco el id que el usario me ingresa
  *
  * \param pIndice int* paso por referencia pIndice
@@ -161,7 +168,7 @@ int buscarLugarId(int* pIndice, int id, eAuto autos[], int tamA);
  * \return int  devuelve 1 si salio todo bien de lo contrario 0
  *
  */
-int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief modifico un auto segun el id que ingresa el usuario
  *
  * \param autos[] eAuto  eAuto  paso por param autos para recorrerlo
@@ -173,10 +180,15 @@ int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[
  * \return int  devuelve 1 si salio todo bien de lo contrario 0
  *
  */
-int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC, eCliente clientes[], int tamCl);
 /** \brief menu de opciones de la modificaion
  *
  * \return int devuelvo la opcion que eligio el usuario
  *
  */
 int menuModificacion();
+
+
+void mostrarCliente(eCliente cliente);
+int mostrarClientes(eCliente clientes[],int tamC);
+int cargarNombreCliente(int id, char nombre[], eCliente clientes[], int tamC);

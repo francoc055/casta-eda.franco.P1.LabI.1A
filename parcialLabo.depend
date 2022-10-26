@@ -1,15 +1,70 @@
 # depslib dependency file v1.0
-1666192133 source:c:\users\franco\documents\parciallabo\main.c
+1666793944 source:c:\users\franco\documents\parciallabo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"auto.h"
+	"listas.h"
+	"trabajo.h"
+	"informes.h"
 
-1666189761 source:c:\users\franco\documents\parciallabo\auto.c
+1666792083 source:c:\users\franco\documents\parciallabo\auto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"auto.h"
+	"validaciones.h"
 
-1666191075 c:\users\franco\documents\parciallabo\auto.h
+1666790873 c:\users\franco\documents\parciallabo\auto.h
+
+1666788995 c:\users\franco\documents\parciallabo\listas.h
+	"trabajo.h"
+
+1666794533 source:c:\users\franco\documents\parciallabo\listas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+	"listas.h"
+	"trabajo.h"
+
+1666791528 c:\users\franco\documents\parciallabo\trabajo.h
+
+1666791454 source:c:\users\franco\documents\parciallabo\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auto.h"
+	"listas.h"
+	"trabajo.h"
+	"validaciones.h"
+
+1666787494 source:c:\users\franco\documents\parciallabo\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"auto.h"
+	"listas.h"
+	"trabajo.h"
+	"validaciones.h"
+
+1666794286 c:\users\franco\documents\parciallabo\validaciones.h
+	"auto.h"
+	"trabajo.h"
+
+1666792259 source:c:\users\franco\documents\parciallabo\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"auto.h"
+	"listas.h"
+	"trabajo.h"
+	"validaciones.h"
+	"informes.h"
+
+1666791255 c:\users\franco\documents\parciallabo\informes.h
+	"auto.h"
+	"trabajo.h"
 
